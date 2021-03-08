@@ -1,0 +1,31 @@
+.movie-details {
+  display: flex;
+  margin-top: 20px;
+}
+
+.movie-details-img-container {
+  margin-right: 40px;
+}
+
+.genre-text {
+  display: inline-block;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.movie-details-link {
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+  &.selected {
+    color: blue;
+  }
+  margin-right: 10px;
+}
+
+.movie-details-list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}

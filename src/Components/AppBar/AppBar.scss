@@ -1,0 +1,32 @@
+.header {
+  background-color: cadetblue;
+}
+
+.header-list {
+  display: flex;
+  justify-content: center;
+}
+
+.header-link {
+  color: black;
+  text-decoration: none;
+  &.selected {
+    color: blue;
+  }
+}
+
+.container {
+  max-width: 800px;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-list-item {
+  list-style-type: none;
+  font-weight: 700;
+
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}

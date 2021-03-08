@@ -1,0 +1,24 @@
+.search-form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-form-input {
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid gray;
+  margin-right: 20px;
+}
+
+.search-form-submit {
+  font-weight: 700;
+  color: white;
+  background-color: gray;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}

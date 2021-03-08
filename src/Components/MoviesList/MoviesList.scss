@@ -1,0 +1,12 @@
+.movie-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.movie-item-link {
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+  &:visited {
+    color: blueviolet;
+  }
+}
