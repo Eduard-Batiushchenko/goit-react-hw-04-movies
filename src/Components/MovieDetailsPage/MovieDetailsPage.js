@@ -41,6 +41,7 @@ class MovieDetailsPage extends Component {
       <>
         <button
           type="button"
+          className="search-form-submit"
           onClick={() => {
             this.props.history.location.state
               ? this.props.history.push(
