@@ -57,7 +57,7 @@ class MovieDetailsPage extends Component {
             {img && (
               <img
                 className="movie-details-image"
-                src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2/${img}`}
+                src={`https://image.tmdb.org/t/p/w500${img}`}
                 alt=""
               />
             )}
