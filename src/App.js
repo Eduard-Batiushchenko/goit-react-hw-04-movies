@@ -1,19 +1,37 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import HomePage from './Components/HomePage/HomePage';
 import AppBar from './Components/AppBar/AppBar';
-import MoviesPage from './Components/MoviesPage/MoviesPage';
-import MovieDetailsPage from './Components/MovieDetailsPage/MovieDetailsPage';
+
+const HomePage = lazy(
+  () =>
+    import(
+      './Components/HomePage/HomePage'
+    ) /* webpackChunkName: "home-page" */,
+);
+const MoviesPage = lazy(
+  () =>
+    import(
+      './Components/MoviesPage/MoviesPage'
+    ) /* webpackChunkName: "movies-page" */,
+);
+const MovieDetailsPage = lazy(
+  () =>
+    import(
+      './Components/MovieDetailsPage/MovieDetailsPage'
+    ) /* webpackChunkName: "movies-details-page" */,
+);
 
 function App() {
   return (
     <>
       <AppBar />
       <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/movies" component={MoviesPage} />
-        <Route path="/movies/:idMovie" component={MovieDetailsPage} />
-        <Redirect to="/" />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/movies" component={MoviesPage} />
+          <Route path="/movies/:idMovie" component={MovieDetailsPage} />
+          <Redirect to="/" />
+        </Suspense>
       </Switch>
     </>
   );
